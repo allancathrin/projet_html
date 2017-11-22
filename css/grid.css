@@ -1,0 +1,91 @@
+.container
+{
+    width: 60%;
+    margin: auto;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12
+{
+    display: inline-block;
+}
+
+.col-1
+{
+    width: 8%;
+}
+
+.col-2
+{
+    width: 16%;
+}
+
+.col-3
+{
+    width: 24%;
+}
+
+.col-4
+{
+    width:32%;
+}
+
+.col-5
+{
+    width:40%;
+}
+
+.col-6
+{
+    width:48%;
+}
+
+.col-7
+{
+    width:56%;
+}
+
+.col-8
+{
+    width: 64%;
+}
+
+.col-9
+{
+    width: 72%;
+}
+
+.col-10
+{
+    width: 80%;
+}
+
+.col-11
+{
+    width: 88%;
+}
+
+.col-12
+{
+    width: 96%;
+}
+
+.row
+{
+    width:100%;
+}
+
+.row [class^="col"] {
+    margin: 0.5rem 0.5%;
+    min-height: 0.125rem;
+}
