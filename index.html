@@ -2,20 +2,101 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Jeux d'échecs</title>
     <link rel="stylesheet" href="css/chessboard-0.3.0.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
     <script src="js/chess.js"></script>
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/chessboard-0.3.0.min.js"></script>
+    
 
 </head>
+<header>
+    <nav>
+        <ul>
+            <li><img src="img/logo.png"></li>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Règles</a></li>
+            <li><a href="#">Jeu</a></li>
+        </ul>
+    </nav>
+</header>
+
 <body>
-<h1>JE SUIS UN GATEAU DE RIZ</h1>
-    <div id="board" style="width: 400px"></div>
-    <p>Status: <span id="status"></span></p>
-    <p>FEN: <span id="fen"></span></p>
-    <p>PGN: <span id="pgn"></span></p>
-    <script src="js/game.js"></script>
+    <div class="container">
+
+    <h1 id="titre"><font face="snell roundhand">Le monde des échecs </font></h1>
+
+    <br>
+
+    <!-- Histoire des echecs -->
+    <section id="histoire">
+        <h1>Histoire des échecs</h1>
+
+        <p>
+            Les échecs ou jeu d'échecs sont un jeu de société combinatoire abstrait pour deux joueurs 
+            (partie simple) ou pour un joueur contre plusieurs (parties simultanées).    
+            L'origine du jeu se perd dans la nuit des temps et fait l'objet de plusieurs hypothèses relevant 
+            des mythes et légendes. Le jeu, dans sa forme primitive, serait né en Asie, à une époque 
+            indéterminée, peut-être avant notre ère. Adopté au Moyen-Orient, il y connaît un grand développement 
+            qui prépare sa forme moderne.
+            Arrivé en Europe avec les conquêtes arabes, il y a évolué lentement, et ses règles y ont été 
+            formalisées puis figées après la Renaissance, pour donner le jeu que nous connaissons aujourd'hui.
+            Au terme d'un processus de normalisation, le jeu d'échecs dans sa forme moderne est désormais 
+            répandu dans le monde entier, et il est pratiqué par de nombreux joueurs, librement ou affiliés à 
+            des clubs et des fédérations nationales. Des compétitions sont organisées à tous les niveaux, 
+            y compris les championnats du monde et les Olympiades sous l'égide de la Fédération internationale 
+            des échecs. Il existe un système de classement des joueurs en fonction de leur force, dominé par 
+            les maîtres et grands maîtres internationaux. Dans ce contexte, le jeu d'échecs joue un rôle sur 
+            la scène internationale et ses compétitions ont notamment été l'un des théâtres de la Guerre froide.
+            Le jeu moderne diffère fortement des versions primitives.
+        </p>
+
+    </section>
+
+    <br><br>
+
+    <!-- Integration du jeu IA vs IA (demo) -->
+    <section id="demo">
+
+        <h1>Démonstration</h1>
+        <br>
+        <div id="board" style="width: 400px"></div>
+        <script src="js/gameDemo.js"></script>
+
+
+    </section> 
+
+<br><br>
+
+    <!-- Origine des échecs -->
+    <section id="origine">
+        <h1>Origines des échecs</h1>
+
+        <p>
+            Il existe des jeux d'échecs différents, persans (chatrang), indiens (chaturanga), arabes (shatranj), 
+            mongols (shatar), européens, birmans (sit-tu-yin), thaïs ou cambodgiens (makruk), malais (catur), 
+            chinois (xiangqi), coréens (janggi), japonais (shogi), etc. Tous ces jeux partagent un ensemble de 
+            traits qui renvoient à une véritable préhistoire puisqu’il n’existe aucun témoignage direct et sans 
+            équivoque du supposé ancêtre commun. Or, si l’histoire du développement des échecs se trouve largement 
+            décrite et bien connue, les origines restent enveloppées d’un voile opaque qui les renvoie le plus 
+            souvent à une naissance indienne ex nihilo. Pourtant, un examen objectif des sources disponibles 
+            révèle vite la fragilité de cette thèse très répandue. L'histoire des échecs a elle aussi sa propre 
+            « histoire », riche et surprenante ! Cette dernière est née dès les premières diffusions du jeu et 
+            a tout de suite mêlé l’épopée et la légende. Puis une réaction exagérément rationnelle est venue 
+            créer un nouveau mythe : la primauté d’un ancêtre, chaturâjî ou chaturanga, joué aux dés par quatre 
+            protagonistes avant qu’un sage élimine le hasard et réduise la partie à deux compères. Cette belle 
+            fable est aussi séduisante que tenace. Pourtant, elle est très certainement fausse.
+        </p>
+
+    </section>
+
+    </div>
 
 </body>
+
+<footer>
+
+</footer>
 </html>
