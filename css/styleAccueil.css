@@ -35,3 +35,9 @@ nav li a:hover {
 #titre {
     text-align: center;
 }
+
+.container {
+    background-color: #F0D9C5;
+    margin: auto;
+    padding: 10px;
+}
