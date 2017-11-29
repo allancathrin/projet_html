@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jeux d'échecs | Jeu</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chessboard-0.3.0.min.css">
+    <script src="js/chess.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/chessboard-0.3.0.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><img src="img/logo.png" alt="Logo" id="logo"/></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="regles.html">Règles</a></li>
+            <li><a href="jeu.html">Jeu</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container regle">
+    <h1 id="titre">Type de jeu : <span id="gameMode"></span></h1>
+    <form action="#" method="GET">
+        <select name="gameMode">
+            <option value="0">Human Vs Computer</option>
+            <option value="1">Human Vs Human</option>
+        </select>
+        <input type="submit" value="Ok">
+    </form>
+
+    <div id="board" style="width: 400px"></div>
+    <div id="board2" style="width: 400px"></div>
+    <input type="button" id="startPositionBtn" value="Start Position" />
+    <input type="button" id="clearBoardBtn" value="Clear Board" />
+    <script src="js/gameMode.js"></script>
+</div>
+</body>
+</html>
