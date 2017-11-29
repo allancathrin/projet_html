@@ -9,6 +9,7 @@ body
 {
     margin: 0;
     padding-top:42px;
+    background: linear-gradient(180deg,#DEB887,#E08333);
 }
 
 nav ul {
@@ -84,11 +85,6 @@ nav
     z-index: 999;
 }
 
-body {
-    background-color: #DEB887;
-    margin: 0;
-}
-
 .container {
     background-color: #F0D9C5;
     margin: auto;
@@ -104,4 +100,36 @@ body {
 
 #board, #board2 {
     margin: auto;
+}
+
+
+/* Règles */
+.regle img
+{
+    width: 100%;
+}
+
+.regle h1
+{
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url('../img/regles/header/regle.jpg');
+}
+
+.sub-container
+{
+    background-color: #F0D9C5;
+    margin: auto;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.regle
+{
+    padding: 0;
+}
+
+#deplacement section:nth-child(2n+1) {
+    background-color: rgba(255,255,255,0.5);
 }
