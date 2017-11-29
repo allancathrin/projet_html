@@ -1,6 +1,7 @@
 body
 {
     margin: 0;
+    padding-top:42px;
 }
 
 nav ul {
@@ -26,4 +27,51 @@ nav li a {
 /* Change the link color to #111 (black) on hover */
 nav li a:hover {
     background-color: #111;
+}
+
+.blanc
+{
+    color: white;
+    font-weight: bold;
+}
+
+.noire
+{
+    color: black;
+    font-weight: bold;
+}
+
+.regle hr
+{
+    width: 50%
+}
+
+a.ref
+{
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    color: #999999;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.ref:hover
+{
+    color:white;
+}
+
+#logo
+{
+    padding: 0 20px ;
+    max-height: 42px;
+}
+
+nav
+{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
 }
