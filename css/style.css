@@ -74,4 +74,24 @@ nav
     top:0;
     left:0;
     width:100%;
+    z-index: 999;
+}
+
+body {
+    background-color: #DEB887;
+    margin: 0;
+}
+
+.container {
+    background-color: #F0D9C5;
+    margin: auto;
+    padding: 10px;
+}
+
+#titre {
+    text-align: center;
+}
+
+#board {
+    margin: auto;
 }
