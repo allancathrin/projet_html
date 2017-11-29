@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Snell Roundhand';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Snell Roundhand'), url('../font/SnellRoundhand.woff') format('woff');
+}
+
 body
 {
     margin: 0;
@@ -86,12 +93,15 @@ body {
     background-color: #F0D9C5;
     margin: auto;
     padding: 10px;
+    min-height: 100vh;
 }
 
 #titre {
     text-align: center;
+    font-family: "Snell Roundhand";
+    font-size: 40px;
 }
 
-#board {
+#board, #board2 {
     margin: auto;
 }
