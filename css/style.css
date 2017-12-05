@@ -205,3 +205,119 @@ footer li a {
 #deplacement section:nth-child(2n+1) {
     background-color: rgba(255,255,255,0.5);
 }
+
+body {
+	background-color:#EDEDED;
+}
+
+* {
+	outline:none;
+}
+
+/* Konfucjusz  */
+
+#korfu:before, #korfu:after {
+    border-top: medium none;
+    bottom: 1px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+#korfu:before, #korfu:after {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D9D9D9;
+}
+#korfu:after {
+    bottom: -5px;
+    box-shadow: 0 0 2px #D9D9D9;
+    left: 1px;
+    right: 1px;
+}
+#korfu:before, #korfu:after {
+    border-top: medium none;
+    bottom: 1px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+#korfu:before, #korfu:after {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D9D9D9;
+}
+
+#korfu {
+	position:relative;
+	margin: 0 auto;
+	margin-top:100px;
+	width:242px;
+	border:1px solid black;
+	border-left-color:#B6B6B6;
+	border-color: #DBDBDB #B6B6B6 #C2C2C2;
+	height:218px;
+	transition: display 0.2s ease 0s;
+	border-radius:6px;
+	background:#FCFCFC;
+	backgourn-color: #FEFEFE;
+	background: -moz-linear-gradient(top, #FEFEFE 20%, #F8F8F8);
+	background: -o-linear-gradient(top, #FEFEFE 20%, #F8F8F8);
+	background: -webkit-linear-gradient(top, #FEFEFE 20%, #F8F8F8);
+	padding:10px 20px 10px 20px;
+	margin-bottom:200px;
+}
+
+h2 {
+	font-family: 'Lato', sans-serif;
+	font-weight:bold;
+	color:#5E5E5C;
+	font-size:16px;
+	margin-bottom: 2px;
+}
+#korfu hr {
+	border:0;
+	border-top:1px solid  #EBEBEB;
+	height:3px;
+	padding-bottom:15px;
+}
+
+#korfu input {
+	margin-bottom:20px;
+	width:228px;
+	color:#A49FA3;
+	font-family: 'Lato', sans-serif;
+	padding:6px;
+	border-radius:3px;
+	border:1px;
+	border:1px solid;
+	font-size:12px;
+	box-shadow: 1px 0 1px rgba(215, 215, 215, 0.5) inset,
+			0 1px 0 rgba(224, 224, 224, 0.9) inset,
+			0 1px 0 rgba(242, 242, 242, 0.9) inset,
+			0 1px 0 rgba(235, 235, 235, 0.9) inset;
+	border-color:#ADADAD #D7D7D7 #EBEBEB #D7D7D7;
+}
+
+#korfu button {
+	width:242px;
+	padding:6px;
+	border:1px solid;
+	border-color:#C77B30 #C44D13 #C33203 #C44D13;
+	border-radius:4px;
+	color:white;
+	font-weight:bold;
+	height:40px;
+	background: -moz-linear-gradient(top, #F9A960 , #F56735);
+	background: -o-linear-gradient(top, #F9A960 , #F56735);
+	background: -webkit-linear-gradient(top, #F9A960 , #F56735);
+	font-family: 'Lato', sans-serif;
+	cursor: pointer;
+	box-shadow: 2px 3px 3px rgba(221, 221, 221, 0.9),0 1px 0 #FBC984 inset;
+}
+
+#korfu button:active {
+	background: -moz-linear-gradient(bottom, #F9A960 10%, #F56735);
+	box-shadow:none;
+}	
