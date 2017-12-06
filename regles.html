@@ -5,35 +5,40 @@
     <title>Jeux d'échecs | Règles</title>
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/menu.js"></script>
+
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="topnav">
             <ul>
                 <li><img src="img/logo.png" alt="Logo" id="logo"/></li>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="regles.html">Règles</a></li>
+                <li><a href="regles.html" class="active">Règles</a></li>
                 <li><a href="jeu.html">Jeu</a></li>
-                <li style="float: right;"><a href="inscription.html">Connexion</a></li>
+                <li id="navInscription"><a href="inscription.html">Connexion</a></li>
+                <li class="icon"><a href="javascript:void(0);" onclick="menu()">&#9776;</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container regle">
-        <section> <!-- Règles du jeu -->
-            <h1 id="titre">Règles du jeu</h1>
-            <p>Au cours de sa longue histoire, les règles des échecs ont beaucoup évolué. Aujourd’hui, le jeu se
-                pratique sur un plateau composé de 64 cases dont 32 de couleur <span class="blanc">blanche</span> et 32 de couleur <span class="noire">noire</span>. La case
-                inférieure droite, face aux joueurs, doit toujours être blanche. Notons également que la dame se trouve
-                toujours sur la case de sa couleur.</p>
-        </section>
+    <div class="regle">
+        <h1 id="titre">Règles du jeu</h1>
+        <p class="sub-container">Au cours de sa longue histoire, les règles des échecs ont beaucoup évolué. Aujourd’hui, le jeu se
+            pratique sur un plateau composé de 64 cases dont 32 de couleur <span class="blanc-texte">blanche</span> et 32 de couleur <span class="noir-texte">noire</span>. La case
+            inférieure droite, face aux joueurs, doit toujours être blanche. Notons également que la dame se trouve
+            toujours sur la case de sa couleur.</p>
 
-        <section> <!-- Déplacements des pièces -->
-            <h3>Déplacements des pièces</h3>
-            <p>Aux échecs, chaque joueur dispose de 8 pions et 8 pièces (deux tours, deux chevaux, deux fou, une dame
-                et un roi) qui possèdent des propres règles de déplacement qui lui sont propres.</p>
+        <div class="regle-container">
+            <section id="deplacement"> <!-- Déplacements des pièces -->
+                <h3 id="moove">Déplacements des pièces</h3>
+                <p class="noir" style="margin-top: 0px; margin-bottom: 0px; padding: 16px 10px;">Aux échecs, chaque joueur dispose de 8 pions et 8 pièces (deux tours, deux chevaux, deux fou, une dame
+                    et un roi) qui possèdent des propres règles de déplacement qui lui sont propres.</p>
 
-            <section class="row"> <!-- Pion-->
+                <section class="blanc"> <!-- Pion-->
                     <div class="col-4">
                         <img src="img/regles/pion.jpg" alt="Déplacements possible du pion"/>
                     </div>
@@ -43,114 +48,144 @@
                             exceptionnellement avancer d’une ou de deux cases. Pour prendre une pièce ennemie, il se déplace
                             seulement en diagonale d’une seule case.</p>
                     </div>
-            </section>
-            <hr>
-            <section> <!-- Tour -->
-                <div class="col-8">
-                    <h4 id="piece-tour">La Tour</h4>
-                    <p>La tour se déplace horizontalement ou verticalement d’autant de cases que vous le souhaitez.</p>
-                </div>
-                <div class="col-4">
-                    <img src="img/regles/tour.jpg" alt="Déplacements possible de la tour"/>
-                </div>
-            </section>
-            <hr>
-            <section><!-- Cavalier -->
-                <div class="col-4">
-                    <img src="img/regles/cavalier.jpg" alt="Déplacements possible du cavalier"/>
-                </div>
-                <div class="col-8">
-                    <h4 id="piece-cavalier">Le Cavalier</h4>
-                    <p>Le cavalier saute par dessus les cases qui entourent sa position initiale (même s’il y a des pièces
-                        du même joueur) pour se poser sur une des cases de couleur opposée la plus proche.</p>
-                </div>
-            </section>
-            <hr>
-            <section><!-- Fou -->
-                <div class="col-8">
-                    <h4 id="piece-fou">Le Fou</h4>
-                    <p>Le fou se déplace diagonalement d’autant de cases que vous le souhaitez.</p>
-                </div>
-                <div class="col-4">
-                    <img src="img/regles/fou.jpg" alt="Déplacements possible du fou"/>
-                </div>
-            </section>
-            <hr>
-            <section><!-- Reine -->
-                <div class="col-4">
-                    <img src="img/regles/reine.jpg" alt="Déplacements possible de la reine"/>
-                </div>
-                <div class="col-8">
-                    <h4 id="piece-reine">La Reine</h4>
-                    <p>La reine se déplace diagonalement, horizontalement et verticalement d’autant de cases que vous le souhaitez.</p>
-                </div>
-            </section>
-            <hr>
-            <section><!-- Roi -->
-                <div class="col-8">
-                    <h4 id="piece-roi">Le Roi</h4>
-                    <p>Le roi se déplace sur n’importe quelle case adjacente à sa position initiale.</p>
-                </div>
-                <div class="col-4">
-                    <img src="img/regles/roi.jpg" alt="Déplacements possible du roi"/>
-                </div>
-            </section>
-        </section>
+                </section>
 
-        <section><!-- Coups spéciaux -->
-            <h3>Les coups spéciaux</h3>
-            <p>Hormis les déplacements classiques que nous venons d’évoquer, on peut également effectuer trois autres types de coups.</p>
+                <section> <!-- Tour -->
+                    <div class="col-8">
+                        <h4 id="piece-tour">La Tour</h4>
+                        <p>La tour se déplace horizontalement ou verticalement d’autant de cases que vous le souhaitez.</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="img/regles/tour.jpg" alt="Déplacements possible de la tour"/>
+                    </div>
+                </section>
 
-            <section>
-                <h4>Le roque</h4>
-                <p>Le roque permet de déplacer le roi de 2 cases vers la tour et de positionner la <a href="#piece-tour" class="ref">tour</a> en question
-                    derrière le <a href="#piece-roi" class="ref">roi</a>. Il ne peut plus être effectué si le roi ou la tour ont déjà bougé. Il est
-                    momentanément empêché si le roi est échec ou s’il y a des pièces entre le roi et la tour.</p>
+                <section><!-- Cavalier -->
+                    <div class="col-4">
+                        <img src="img/regles/cavalier.jpg" alt="Déplacements possible du cavalier"/>
+                    </div>
+                    <div class="col-8">
+                        <h4 id="piece-cavalier">Le Cavalier</h4>
+                        <p>Le cavalier saute par dessus les cases qui entourent sa position initiale (même s’il y a des pièces
+                            du même joueur) pour se poser sur une des cases de couleur opposée la plus proche.</p>
+                    </div>
+                </section>
+
+                <section><!-- Fou -->
+                    <div class="col-8">
+                        <h4 id="piece-fou">Le Fou</h4>
+                        <p>Le fou se déplace diagonalement d’autant de cases que vous le souhaitez.</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="img/regles/fou.jpg" alt="Déplacements possible du fou"/>
+                    </div>
+                </section>
+
+                <section><!-- Reine -->
+                    <div class="col-4">
+                        <img src="img/regles/reine.jpg" alt="Déplacements possible de la reine"/>
+                    </div>
+                    <div class="col-8">
+                        <h4 id="piece-reine">La Reine</h4>
+                        <p>La reine se déplace diagonalement, horizontalement et verticalement d’autant de cases que vous le souhaitez.</p>
+                    </div>
+                </section>
+
+                <section><!-- Roi -->
+                    <div class="col-8">
+                        <h4 id="piece-roi">Le Roi</h4>
+                        <p>Le roi se déplace sur n’importe quelle case adjacente à sa position initiale.</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="img/regles/roi.jpg" alt="Déplacements possible du roi"/>
+                    </div>
+                </section>
             </section>
+        </div>
 
-            <section>
-                <h4>La promotion</h4>
-                <p>Quand un <a href="#piece-pion" class="ref">pion</a> parvient jusqu’à la rangé la plus proche du joueur adverse, il se transforme en <a href="#piece-reine" class="ref">reine</a>,
-                    en <a href="#piece-tour" class="ref">tour</a>, en <a href="#piece-fou" class="ref">fou</a> ou en <a href="#piece-cavalier" class="ref">cavalier</a>. La pièce promue est immédiatement opérationnelle.</p>
-            </section>
+            <section class="regle-container regle-bgc"><!-- Coups spéciaux -->
+                <h3 id="special-moove">Les coups spéciaux</h3>
+                <p>Hormis les déplacements classiques que nous venons d’évoquer, on peut également effectuer trois autres types de coups.</p>
 
-            <section>
-                <h4>La prise en passant</h4>
-                <p>Lorsqu’un <a href="#piece-pion" class="ref">pion</a> se déplace de deux cases (au cours de son premier déplacement), le joueur adverse
-                    peut le prendre avec l’un de ses <a href="#piece-pion" class="ref">pions</a> comme s’il n’avait avancé que d’une seule case.</p>
-            </section>
-        </section>
+                <section class="blanc">
+                    <h4>Le roque</h4>
+                    <p>Le roque permet de déplacer le roi de 2 cases vers la tour et de positionner la <a onclick="scrollToElement('#piece-tour')" class="ref" >tour</a> en question
+                        derrière le <a onclick="scrollToElement('#piece-roi')" class="ref">roi</a>. Il ne peut plus être effectué si le roi ou la tour ont déjà bougé. Il est
+                        momentanément empêché si le roi est échec ou s’il y a des pièces entre le roi et la tour.</p>
+                </section>
 
-        <section>
-            <h3>Le déroulement du jeu</h3>
-            <p>Au début d’une partie d’échecs, ce sont toujours les blancs qui commencent. Lors d’un tour de jeu,
-                le joueur peut effectuer soit un déplacement, soit une prise soit un des coups spéciaux.</p>
-        </section>
+                <section class="noir">
+                    <h4>La promotion</h4>
+                    <p>Quand un <a onclick="scrollToElement('#piece-pion')" class="ref">pion</a> parvient jusqu’à la rangé la plus proche du joueur adverse, il se transforme en <a onclick="scrollToElement('#piece-reine')" class="ref">reine</a>,
+                        en <a onclick="scrollToElement('#piece-tour')" class="ref">tour</a>, en <a onclick="scrollToElement('#piece-fou')" class="ref">fou</a> ou en <a onclick="scrollToElement('#piece-cavalier')" class="ref">cavalier</a>. La pièce promue est immédiatement opérationnelle.</p>
+                </section>
 
-        <section>
-            <h3>Le but du jeu</h3>
-            <p>Ces différents déplacements sont proposées aux joueurs pour parvenir à réaliser leur objectif qui est de
-                prendre le roi adverse. Lorsque ce but est atteint, le joueur qui y est parvenu gagne immédiatement la partie qui prend fin automatiquement.</p>
-
-            <section>
-                <h4>Echec</h4>
-                <p>Chaque fois que vous pouvez prendre le <a href="#piece-roi" class="ref">roi</a> de votre adversaire à votre prochain coup, vous devez le
-                    prévenir en annonçant « échec ». Il doit alors tenter de parer votre échec, lors de son tour de jeu.</p>
+                <section class="blanc">
+                    <h4>La prise en passant</h4>
+                    <p>Lorsqu’un <a onclick="scrollToElement('#piece-pion')" class="ref">pion</a> se déplace de deux cases (au cours de son premier déplacement), le joueur adverse
+                        peut le prendre avec l’un de ses <a onclick="scrollToElement('#piece-pion')" class="ref">pions</a> comme s’il n’avait avancé que d’une seule case.</p>
+                </section>
             </section>
 
-            <section>
-                <h4>Echec et mat</h4>
-                <p>S’il n’y parvient pas, son <a href="#piece-roi" class="ref">roi</a> est alors « échec et mat ». Vous remportez donc la partie.</p>
+            <section class="regle-container regle-bgc">
+                <h3 id="deroulement">Le déroulement du jeu</h3>
+                <p>Au début d’une partie d’échecs, ce sont toujours les blancs qui commencent. Lors d’un tour de jeu,
+                    le joueur peut effectuer soit un déplacement, soit une prise soit un des coups spéciaux.</p>
             </section>
 
-            <section>
-                <h4>Pat</h4>
-                <p>Une partie d’échecs peut également se terminer sur un match nul. Si lors du tour d’un joueur,
-                    celui-ci ne peut déplacer aucune de ses pièces et que son roi n’est pas en échec. On dit alors que
-                    la partie se termine par un « pat ».</p>
-            </section>
+            <section class="regle-container regle-bgc">
+                <h3 id="goal">Le but du jeu</h3>
+                <p>Ces différents déplacements sont proposées aux joueurs pour parvenir à réaliser leur objectif qui est de
+                    prendre le roi adverse. Lorsque ce but est atteint, le joueur qui y est parvenu gagne immédiatement la partie qui prend fin automatiquement.</p>
 
-        </section>
+                <section class="noir">
+                    <h4>Echec</h4>
+                    <p>Chaque fois que vous pouvez prendre le <a onclick="scrollToElement('#piece-roi')" class="ref">roi</a> de votre adversaire à votre prochain coup, vous devez le
+                        prévenir en annonçant « échec ». Il doit alors tenter de parer votre échec, lors de son tour de jeu.</p>
+                </section>
+
+                <section class="blanc">
+                    <h4>Echec et mat</h4>
+                    <p>S’il n’y parvient pas, son <a onclick="scrollToElement('#piece-roi')" class="ref">roi</a> est alors « échec et mat ». Vous remportez donc la partie.</p>
+                </section>
+
+                <section class="noir">
+                    <h4>Pat</h4>
+                    <p>Une partie d’échecs peut également se terminer sur un match nul. Si lors du tour d’un joueur,
+                        celui-ci ne peut déplacer aucune de ses pièces et que son roi n’est pas en échec. On dit alors que
+                        la partie se termine par un « pat ».</p>
+                </section>
+
+            </section>
     </div>
 </body>
+<footer>
+    <section id="footer">
+        <div class="col-4" id="footer1">
+            <h2>Liens utiles : </h2>
+            <ul>
+                <li><a href="https://fr.wikipedia.org/wiki/%C3%89checs">Les échecs</a></li>
+                <li><a href="https://fr.wikipedia.org/wiki/Histoire_du_jeu_d%27%C3%A9checs">L'histoire des echecs</a></li>
+                <li><a href="http://www.echecs.asso.fr/">Fédération Francaise des échecs</a></li>
+            </ul>
+        </div>
+
+        <div class="col-4" id="footer3">
+
+        </div>
+
+        <div class="col-4" id="footer2">
+            <h2>Suivez-nous sur : </h2>
+            <a href="https://www.facebook.com/groups/142784722547076/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/univ_uvhc?lang=fr" class="fa fa-twitter"></a>
+            <a href="http://www.univ-valenciennes.fr/" class="fa fa-globe"></a>
+        </div>
+        <p></p>
+        </div>
+    </section>
+
+    <section id="copyright" class="blanc-texte">
+        <p>&copy; 2017 Antoine Allan Florian - Université de Valenciennes - Lic Pro T2I<p>
+    </section>
+</footer>
 </html>

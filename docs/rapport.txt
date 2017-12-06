@@ -1,0 +1,9 @@
+RAPPORT :
+Problématique
+Solution proposé
+Explication de l'api utilisé
+Présentation de l'éuqipe et répartition des roles
+Planning
+Mise en place
+Développement
+Pr&sentation du produit fini

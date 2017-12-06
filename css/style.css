@@ -12,16 +12,29 @@ body
     background: linear-gradient(180deg,#DEB887,#E08333);
 }
 
+
+/* Navbar */
+nav
+{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 999;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #000;
 }
 
 nav li {
+
     float: left;
+    height:46px;
 }
 
 nav li a {
@@ -30,23 +43,77 @@ nav li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    -webkit-transition: width 1s, height 1s, background-color 1s, color 1s, -webkit-transform 1s;
+    transition: width 1s, height 1s, background-color 1s, color 1s, transform 1s;
 }
 
-/* Change the link color to #111 (black) on hover */
+nav li a.active {
+    background-color: #333;
+}
+
+
 nav li a:hover {
-    background-color: #111;
+    background-color: #fff;
+    color: #000;
 }
 
-.blanc
+nav li#navInscription {
+    float:right;
+}
+
+@media screen and (max-width: 780px) {
+    nav li:not(:first-child) {display: none;}
+    nav li.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    nav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    nav.responsive li, nav li#navInscription.responsive  {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    body.responsive{
+        padding-top:0px;
+    }
+}
+
+.icon {
+    display: none;
+}
+
+
+/* Style de Texte */
+.blanc-texte
 {
     color: white;
     font-weight: bold;
 }
 
-.noire
+.noir-texte
 {
     color: black;
     font-weight: bold;
+}
+
+.blanc
+{
+    background-color: #e0e0e0;
+    color: #1a1a1a;
+}
+
+.noir
+{
+    background-color: #1a1a1a;
+    color: #e0e0e0;
 }
 
 .regle hr
@@ -76,14 +143,7 @@ a.ref:hover
     max-height: 42px;
 }
 
-nav
-{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index: 999;
-}
+
 
 .container {
     background-color: #F0D9C5;
@@ -111,6 +171,7 @@ nav
     width: 100%;
 }
 
+/* Footer */
 footer {
     list-style-type: none;
     margin: 0;
@@ -143,25 +204,35 @@ footer li a {
     text-decoration: none;
 }
 
+/* Font Awesome */
 .fa {
     padding: 20px;
     font-size: 30px;
     width: 50px;
     text-align: center;
     text-decoration: none;
+
+    transition: color .5s, background-color .5s, ease-out;
+    -moz-transition: color .5s, background-color .5s, ease-out;
+    -webkit-transition: color .5s, background-color .5s, -webkit-transform .5s;
+    -o-transition: color .5s, background-color .5s, ease-out;
 }
 
-/* Add a hover effect if you want */
-.fa:hover {
+/*.fa:hover {
     opacity: 0.7;
-}
+}*/
 
-/* Set a specific color for each brand */
 
 /* Facebook */
 .fa-facebook {
     background: #3B5998;
     color: white;
+}
+
+.fa-facebook:hover
+{
+    background: white;
+    color: #3B5998;
 }
 
 /* Twitter */
@@ -170,9 +241,20 @@ footer li a {
     color: white;
 }
 
+.fa-twitter:hover{
+    background: white;
+    color: #55ACEE
+}
+
+
 .fa-globe {
     background: white;
     color: black;
+}
+
+.fa-globe:hover{
+    background: black;
+    color: white;
 }
 
 /* Règles */
@@ -181,20 +263,113 @@ footer li a {
     width: 100%;
 }
 
-.regle h1
+.regle h1, .regle h3
 {
     margin: 0;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    text-align: center;
+
+}
+
+.regle h1, .regle h3
+{
+    color: black;
+    text-shadow:  2px 2px white;
+}
+
+.regle h3
+{
+    font-size:30px;
+}
+
+.regle h1#titre
+{
+    background: url('../img/regles/header/regle.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.regle h3#moove {
+    background: url('../img/regles/header/moove.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 75%;
+}
+
+.regle h3#special-moove {
+    background: url('../img/regles/header/special-moove.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 75%;
+}
+
+.regle h3#deroulement{
+    background: url('../img/regles/header/deroulement.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 75%;
+}
+
+.regle h3#goal {
+    background: url('../img/regles/header/goal.jpeg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.regle-container
+{
+    width: 60%;
+    margin-top: 30px;
+    margin-bottom:30px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);
+}
+
+.regle-container section h4{
+    margin-top:0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.regle-container section p {
+    margin-top:0px;
+    margin-bottom: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-image: url('../img/regles/header/regle.jpg');
+}
+
+.regle-container a, .regle-container a:hover{
+    cursor: pointer;
+}
+
+.regle-bgc
+{
+    background-color: #F0D9C5;
 }
 
 .sub-container
 {
     background-color: #F0D9C5;
-    margin: auto;
     padding: 10px;
-    min-height: 100vh;
+    margin-bottom: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right:auto;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);
 }
 
 .regle
@@ -203,7 +378,13 @@ footer li a {
 }
 
 #deplacement section:nth-child(2n+1) {
-    background-color: rgba(255,255,255,0.5);
+    background-color: #e0e0e0;
+    color: #1a1a1a;
+}
+
+#deplacement section:nth-child(2n) {
+    background-color:#1a1a1a;
+    color: #e0e0e0;
 }
 
 body {

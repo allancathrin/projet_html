@@ -6,19 +6,22 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chessboard-0.3.0.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <script src="js/chess.js"></script>
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/chessboard-0.3.0.js"></script>
 </head>
 <body>
 <header>
-    <nav>
+    <nav class="topnav">
         <ul>
             <li><img src="img/logo.png" alt="Logo" id="logo"/></li>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="regles.html">Règles</a></li>
-            <li><a href="jeu.html">Jeu</a></li>
-            <li style="float: right;"><a href="inscription.html">Connexion</a></li>
+            <li><a href="jeu.html" class="active">Jeu</a></li>
+            <li id="navInscription"><a href="inscription.html">Connexion</a></li>
+            <li class="icon"><a href="javascript:void(0);" onclick="menu()">&#9776;</a></li>
         </ul>
     </nav>
 </header>
@@ -40,4 +43,33 @@
     <script src="js/gameMode.js"></script>
 </div>
 </body>
+<footer>
+    <section id="footer">
+        <div class="col-4" id="footer1">
+            <h2>Liens utiles : </h2>
+            <ul>
+                <li><a href="https://fr.wikipedia.org/wiki/%C3%89checs">Les échecs</a></li>
+                <li><a href="https://fr.wikipedia.org/wiki/Histoire_du_jeu_d%27%C3%A9checs">L'histoire des echecs</a></li>
+                <li><a href="http://www.echecs.asso.fr/">Fédération Francaise des échecs</a></li>
+            </ul>
+        </div>
+
+        <div class="col-4" id="footer3">
+
+        </div>
+
+        <div class="col-4" id="footer2">
+            <h2>Suivez-nous sur : </h2>
+            <a href="https://www.facebook.com/groups/142784722547076/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/univ_uvhc?lang=fr" class="fa fa-twitter"></a>
+            <a href="http://www.univ-valenciennes.fr/" class="fa fa-globe"></a>
+        </div>
+        <p></p>
+        </div>
+    </section>
+
+    <section id="copyright" class="blanc-texte">
+        <p>&copy; 2017 Antoine Allan Florian - Université de Valenciennes - Lic Pro T2I<p>
+    </section>
+</footer>
 </html>

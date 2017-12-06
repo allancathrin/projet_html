@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="css/chessboard-0.3.0.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <script src="js/chess.js"></script>
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/chessboard-0.3.0.min.js"></script>
 </head>
 
 <header>
-    <nav>
+    <nav class="topnav">
         <ul>
-            <li><img src="img/logo.png" alt="Logo" id="logo"></li>
-            <li><a href="index.html">Accueil</a></li>
+            <li><img src="img/logo.png" alt="Logo" id="logo"/></li>
+            <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="regles.html">Règles</a></li>
             <li><a href="jeu.html">Jeu</a></li>
-            <li style="float: right;"><a href="inscription.html">Connexion</a></li>
+            <li id="navInscription"><a href="inscription.html">Connexion</a></li>
+            <li class="icon"><a href="javascript:void(0);" onclick="menu()">&#9776;</a></li>
         </ul>
     </nav>
 </header>
@@ -180,7 +182,7 @@
         </div>
     </section>
 
-    <section id="copyright" class="blanc">
+    <section id="copyright" class="blanc-texte">
         <p>&copy; 2017 Antoine Allan Florian - Université de Valenciennes - Lic Pro T2I<p>
     </section>
 </footer>
