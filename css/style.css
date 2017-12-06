@@ -334,6 +334,14 @@ footer li a {
     font-size:42px;
 }
 
+.regle .regle-container img
+{
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+    display: inline-block;
+}
+
 .regle h1#titre
 {
     background: url('../img/regles/header/regle.jpg') no-repeat;
@@ -389,13 +397,6 @@ footer li a {
     box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);
 }
 
-@media screen and (max-width: 780px) {
-    .regle-container{
-        width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
 
 .regle-container section h4{
     margin-top:0px;
@@ -443,6 +444,21 @@ footer li a {
 {
     padding: 0;
 }
+
+@media screen and (max-width: 780px) {
+    .regle-container{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sub-container{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 #deplacement section:nth-child(2n+1) {
     background-color: #ffffff;
