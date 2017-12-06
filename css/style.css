@@ -5,11 +5,44 @@
     src: local('Snell Roundhand'), url('../font/SnellRoundhand.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'Lato';
+    src: url('../font/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: 'SIMPLIFICA';
+    src: url('../font/SIMPLIFICA.ttf');
+}
+
 body
 {
     margin: 0;
     padding-top:42px;
     background: linear-gradient(180deg,#DEB887,#E08333);
+}
+
+
+p, a, h4
+{
+    font-family:'Lato';
+}
+
+h1{
+    font-family: SIMPLIFICA;
+}
+
+h3{
+    font-family: 'SIMPLIFICA';
+}
+
+h4 {
+    font-size: 20px;
+}
+
+input, select
+{
+    font-family:Lato;
 }
 
 
@@ -106,14 +139,14 @@ nav li#navInscription {
 
 .blanc
 {
-    background-color: #e0e0e0;
-    color: #1a1a1a;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .noir
 {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    background-color: #D7D7D7;
+    color: #000000;
 }
 
 .regle hr
@@ -280,7 +313,7 @@ footer li a {
 
 .regle h3
 {
-    font-size:30px;
+    font-size:42px;
 }
 
 .regle h1#titre
@@ -345,6 +378,14 @@ footer li a {
     padding-bottom: 20px;
 }
 
+.regle-container p {
+    padding: 0 20px;
+}
+
+.regle-container h4{
+    padding-left: 20px;
+}
+
 .regle-container section p {
     margin-top:0px;
     margin-bottom: 0px;
@@ -378,13 +419,13 @@ footer li a {
 }
 
 #deplacement section:nth-child(2n+1) {
-    background-color: #e0e0e0;
-    color: #1a1a1a;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 #deplacement section:nth-child(2n) {
-    background-color:#1a1a1a;
-    color: #e0e0e0;
+    background-color:#D7D7D7;
+    color: #000000;
 }
 
 body {
