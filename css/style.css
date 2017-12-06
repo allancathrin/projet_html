@@ -197,11 +197,17 @@ a.ref:hover
 }
 
 #sissa {
-    width: 100%;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
 }
 
 #medievales {
-    width: 100%;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
 }
 
 /* Footer */
@@ -290,6 +296,18 @@ footer li a {
     color: white;
 }
 
+/* Index */
+.index .regle-container
+{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.index .regle-container h3
+{
+    font-size: 36px;
+}
+
 /* Règles */
 .regle img
 {
@@ -371,6 +389,14 @@ footer li a {
     box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);
 }
 
+@media screen and (max-width: 780px) {
+    .regle-container{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .regle-container section h4{
     margin-top:0px;
     margin-bottom: 0px;
@@ -382,7 +408,7 @@ footer li a {
     padding: 0 20px;
 }
 
-.regle-container h4{
+.regle-container h4, .regle-container h3{
     padding-left: 20px;
 }
 

@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <script src="js/chess.js"></script>
     <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/menu.js"></script>
     <script src="js/chessboard-0.3.0.min.js"></script>
 </head>
 
@@ -26,14 +27,13 @@
     </nav>
 </header>
 
-<body>
-<div class="container">
+<body class="index">
 
     <h1 id="titre">Le monde des échecs </h1>
 
     <!-- Histoire des echecs -->
-    <section id="histoire">
-        <h1>Histoire des échecs</h1>
+    <section id="histoire" class="regle-container regle-bgc">
+        <h3>Histoire des échecs</h3>
 
         <p>
             Les échecs ou jeu d'échecs sont un jeu de société combinatoire abstrait pour deux joueurs
@@ -63,9 +63,9 @@
     <br><br>
 
     <!-- Integration du jeu IA vs IA (demo) -->
-    <section id="demo">
+    <section id="demo" class="regle-container regle-bgc">
 
-        <h1>Démonstration</h1>
+        <h3>Démonstration</h3>
         <br>
         <div id="board" style="width: 400px"></div>
         <script src="js/gameDemo.js"></script>
@@ -76,8 +76,8 @@
     <br><br>
 
     <!-- Origine des échecs -->
-    <section id="origine">
-        <h1>Origines des échecs</h1>
+    <section id="origine" class="regle-container regle-bgc">
+        <h3>Origines des échecs</h3>
 
         <p>
             Il existe des jeux d'échecs différents, persans (chatrang), indiens (chaturanga), arabes (shatranj),
@@ -106,11 +106,11 @@
     <br><br>
 
     <!-- Légendes des échecs -->
-    <section id="legende">
-        <h1>Légendes des échecs</h1>
-        <h3>Le mythe de brahmane Sissa</h3>
+    <section id="legende" class="regle-container regle-bgc">
+        <h3>Légendes des échecs</h3>
+        <h4>Le mythe de brahmane Sissa</h4>
         <div class="col-4">
-            <img src="img/sissa.png" alt="legende de sissa"/>
+            <img src="img/sissa.png" alt="legende de sissa" id="sissa"/>
         </div>
         <div class="col-8">
             <p>
@@ -132,7 +132,7 @@
 
         <br>
 
-        <h3>La légende médiévales</h3>
+        <h4>La légende médiévales</h4>
         <div class="col-8">
             <p>
                 À partir du XIIIe siècle, la pratique du jeu d'échecs est devenue courante en Occident. Des joueurs éclairés 
@@ -153,7 +153,6 @@
     <br>
 
 
-</div>
 
 </body>
 
